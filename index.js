@@ -7,6 +7,10 @@ app.get('/', function (req, res) {
   res.send('hello world')
 })
 
+app.get('/test', function(req, res) {
+  res.send('hello world2')
+}
+
 app.get('/apple-app-site-association', function(req, res) {
   // Note: should use a stream here, instead of fs.readFile
   fs.readFile('./apple-app-site-association', function(err, data) {
