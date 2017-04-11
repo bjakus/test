@@ -28,4 +28,4 @@ app.get('/content/:file', function(req, res){
 
 });
 
-app.listen(80);
+app.listen(process.env.PORT || 3000);
