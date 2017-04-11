@@ -14,7 +14,7 @@ app.get('/apple-app-site-association', function(req, res) {
       res.send("Oops! Couldn't find that file.");
     } else {
       // set the content type based on the file
-      res.contentType('application/pkcs7-mime');
+      res.contentType('application/json');
       res.send(data);
     }   
     res.end();
@@ -23,7 +23,7 @@ app.get('/apple-app-site-association', function(req, res) {
 
 app.get('/content/:file', function(req, res){
     fs.readFile('./files/' + req.params.file, function(err, data){
-        res.contentType('application/pkcs7-mime');
+        res.contentType('application/json');
         res.write(data);
         res.end();
 
