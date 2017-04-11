@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 
 app.get('/apple-app-site-association', function(req, res) {
   // Note: should use a stream here, instead of fs.readFile
-  fs.readFile('./files/' + 'apple-app-site-association', function(err, data) {
+  fs.readFile('./apple-app-site-association', function(err, data) {
     if(err) {
       res.send("Oops! Couldn't find that file.");
     } else {
